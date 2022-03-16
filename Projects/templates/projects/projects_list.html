@@ -1,0 +1,17 @@
+{% extends "accounts/main.html" %}
+{% block content %}
+{% load render_table from django_tables2 %}
+<!doctype html>
+<html>
+    <head>
+        <title> Liste des projets</title>
+        <span><a href="/add-project" class="btn btn-primary">Add New Project</a></span> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    </head>
+    <body>
+        
+        {% render_table view_project %}
+        
+    </body>
+</html>
+{% endblock %}

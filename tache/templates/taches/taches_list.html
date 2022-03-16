@@ -1,0 +1,16 @@
+{% extends "accounts/main.html" %}
+{% block content %}
+{% load render_table from django_tables2 %}
+<!doctype html>
+<html>
+    <head>
+        <title> Liste des taches</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    </head>
+    <body>
+        <h4> Liste des taches</h4> <span><a href="/add-tache" class="btn btn-primary">Add New Tache</a></span> 
+        {% render_table view_taches %}
+        
+    </body>
+</html>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "accounts/main.html" %}
+{% block content %}
+
+<form method="POST" action="{% url "AddNewTache" %}">
+    {% csrf_token %}
+
+    {{ form }}
+
+ <button type="submit" class="btn btn-success btn-lg">Ajouter</button> 
+
+
+{% endblock %}
